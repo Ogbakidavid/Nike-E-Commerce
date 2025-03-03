@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Syncopate:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.home {
+  @apply
+  w-full flex
+  lg:flex-row flex-col justify-center
+  min-h-screen gap-10
+}
+
+@theme {
+  /* --font-display: "Satoshi", "sans-serif"; */
+  --font-primary: "Poppins";
+  --font-secondary: "Syncopate";
+  --font-tertiary: "Roboto Mono";
+
+  --breakpoint-3xl: 1920px;
+
+  --color-primary: oklch(96.13% 0.007 259.21);
+  --color-coral: oklch(64.75% 0.201 27.73);
+  --color-slate-gray: oklch(48.61% 0.011 257.55);
+  --color-pale-blue: oklch(98.08% 0.005 259.00);
+  --color-white-400: oklch(100% 0 0 / 0.8);
+  --color-overlay: oklch(0% 0 0 / 90%);
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+
+@layer components {
+  .input {
+    @apply 
+    sm:flex-1 max-sm:w-full text-base
+    leading-normal text-slate-gray pl-5 
+    max-sm:p-5 outline-none sm:border-none 
+    border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+
+  .max-container {
+    max-width: 1440px;
+    margin:0 auto;
+  }
+}
